@@ -1,0 +1,78 @@
+#include <stdio.h>
+
+int main() {
+    int idade1, idade2, idade3;
+
+    // Captura as idades das três pessoas
+    printf("Digite a idade da Primeira pessoa: ");
+    scanf("%d", &idade1);
+    printf("Digite a idade da Segunda pessoa: ");
+    scanf("%d", &idade2);
+    printf("Digite a idade da Terceira pessoa: ");
+    scanf("%d", &idade3);
+
+    // Classificação das idades
+    printf("\nClassificação das idades:\n");
+
+    // Classificar a primeira pessoa
+    if (idade1 <= 12) {
+        printf("Primeira pessoa: Criança\n");
+    } else if (idade1 <= 19) {
+        printf("Primeira pessoa: Adolescente\n");
+    } else if (idade1 <= 60) {
+        printf("Primeira pessoa: Adulto\n");
+    } else {
+        printf("Primeira pessoa: Idoso\n");
+    }
+
+    // Classificar a segunda pessoa
+    if (idade2 <= 12) {
+        printf("Segunda pessoa: Criança\n");
+    } else if (idade2 <= 19) {
+        printf("Segunda pessoa: Adolescente\n");
+    } else if (idade2 <= 60) {
+        printf("Segunda pessoa: Adulto\n");
+    } else {
+        printf("Segunda pessoa: Idoso\n");
+    }
+
+    // Classificar a terceira pessoa
+    if (idade3 <= 12) {
+        printf("Terceira pessoa: Criança\n");
+    } else if (idade3 <= 19) {
+        printf("Terceira pessoa: Adolescente\n");
+    } else if (idade3 <= 60) {
+        printf("Terceira pessoa: Adulto\n");
+    } else {
+        printf("Terceira pessoa: Idoso\n");
+    }
+
+    // Ordenação das idades (do mais novo para o mais velho)
+    printf("\nIdades ordenadas do mais novo para o mais velho:\n");
+
+    // Verificar qual idade é a menor, intermediária e a maior
+    if (idade1 <= idade2 && idade1 <= idade3) {
+        printf("%d (Primeira pessoa), ", idade1);
+        if (idade2 <= idade3) {
+            printf("%d (Segunda pessoa), %d (Terceira pessoa)\n", idade2, idade3);
+        } else {
+            printf("%d (Terceira pessoa), %d (Segunda pessoa)\n", idade3, idade2);
+        }
+    } else if (idade2 <= idade1 && idade2 <= idade3) {
+        printf("%d (Segunda pessoa), ", idade2);
+        if (idade1 <= idade3) {
+            printf("%d (Primeira pessoa), %d (Terceira pessoa)\n", idade1, idade3);
+        } else {
+            printf("%d (Terceira pessoa), %d (Primeira pessoa)\n", idade3, idade1);
+        }
+    } else {
+        printf("%d (Terceira pessoa), ", idade3);
+        if (idade1 <= idade2) {
+            printf("%d (Primeira pessoa), %d (Segunda pessoa)\n", idade1, idade2);
+        } else {
+            printf("%d (Segunda pessoa), %d (Primeira pessoa)\n", idade2, idade1);
+        }
+    }
+
+    return 0;
+}
