@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int diaria1 = 80;
+    int diaria2 = 100;
+    int diaria3 = 150;
+    int dias;
+
+    printf("Quantos dias voce ficara no hotel\n");
+    scanf("%d", &dias);
+
+    if (dias == 3){
+        printf("Valor: %d\n", diaria1 * dias);
+    } else if (dias == 5){
+        printf("Valor: %d\n", diaria2 * dias);
+    } else if (dias == 10) {
+        printf("Valor: %d\n", diaria3 * dias);
+    } else {
+        printf("Desculpe, este hotel so oferece diarias para 3, 5 ou 10 dias.\n");
+  }
+}
