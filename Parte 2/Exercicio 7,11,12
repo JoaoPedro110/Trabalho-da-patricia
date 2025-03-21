@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    // Números pares e ímpares de 0 a 200
+    printf("Números pares de 0 a 200:\n");
+    for (int i = 0; i <= 200; i += 2) {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    printf("Números ímpares de 0 a 200:\n");
+    for (int i = 1; i <= 200; i += 2) {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    // Números de 100 a 0
+    printf("Números de 100 a 0:\n");
+    for (int i = 100; i >= 0; i--) {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    // Números de 0 a 100 de 5 em 5
+    printf("Números de 0 a 100 de 5 em 5:\n");
+    for (int i = 0; i <= 100; i += 5) {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    return 0;
+}
