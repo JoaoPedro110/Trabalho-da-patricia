@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    // Passo i: Ler e mostrar o nome do aluno
+    char nome[100];
+    printf("Digite o nome do aluno: ");
+    fgets(nome, sizeof(nome), stdin);  // Lê o nome do aluno (suporta espaços)
+
+    // Passo ii: Pedir para o aluno digitar 2 notas
+    float nota1, nota2;
+
+    // Verificando se as notas estão entre 0 e 10
+    do {
+        printf("Digite a primeira nota (entre 0 e 10): ");
+        scanf("%f", &nota1);
+        if (nota1 < 0 || nota1 > 10) {
+            printf("Nota inválida! A nota deve estar entre 0 e 10.\n");
+        }
+    } while (nota1 < 0 || nota1 > 10);  // Loop até a nota ser válida
+
+    do {
+        printf("Digite a segunda nota (entre 0 e 10): ");
+        scanf("%f", &nota2);
+        if (nota2 < 0 || nota2 > 10) {
+            printf("Nota inválida! A nota deve estar entre 0 e 10.\n");
+        }
+    } while (nota2 < 0 || nota2 > 10);  // Loop até a nota ser válida
+
+    // Passo iii: Calcular a média
+    float media = (nota1 + nota2) / 2;
+
+    // Passo iv: Mostrar a média
+    printf("A média do aluno %s é: %.1f\n", nome, media);
+
+    // Passo v: Verificar a situação do aluno e mostrar a mensagem
+    if (media < 5.0) {
+        printf("Situação: Reprovado\n");
+    } else if (media >= 5.0 && media <= 6.9) {
+        printf("Situação: Recuperação\n");
+    } else {
+        printf("Situação: Aprovado\n");
+    }
+
+    return 0;
+}
