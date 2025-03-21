@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main() {
+    int opcaoMenu, opcaoCardapio;
+
+    // Menu principal
+    printf("Escolha uma das opções abaixo:\n");
+    printf("1. Menu de sobremesas\n");
+    printf("2. Cardápio de churrascaria\n");
+    printf("Digite sua opção: ");
+    scanf("%d", &opcaoMenu);
+
+    if (opcaoMenu == 1) {
+        // Menu de sobremesas
+        printf("\nEscolha uma sobremesa:\n");
+        printf("1. Pudim\n2. Sorvete\n3. Bolo\n4. Mousse\n");
+        printf("Digite sua opção: ");
+        scanf("%d", &opcaoCardapio);
+
+        switch(opcaoCardapio) {
+            case 1: printf("Você escolheu Pudim.\n"); break;
+            case 2: printf("Você escolheu Sorvete.\n"); break;
+            case 3: printf("Você escolheu Bolo.\n"); break;
+            case 4: printf("Você escolheu Mousse.\n"); break;
+            default: printf("Opção inválida!\n"); break;
+        }
+    } 
+    else if (opcaoMenu == 2) {
+        // Cardápio de churrascaria
+        printf("\nEscolha uma opção do cardápio:\n");
+        printf("1. Picanha\n2. Costela\n3. Frango\n4. Linguica\n");
+        printf("Digite sua opção: ");
+        scanf("%d", &opcaoCardapio);
+
+        switch(opcaoCardapio) {
+            case 1: printf("Você escolheu Picanha.\n"); break;
+            case 2: printf("Você escolheu Costela.\n"); break;
+            case 3: printf("Você escolheu Frango.\n"); break;
+            case 4: printf("Você escolheu Linguica.\n"); break;
+            default: printf("Opção inválida!\n"); break;
+        }
+    } 
+    else {
+        printf("Opção inválida!\n");
+    }
+
+    return 0;
+}
