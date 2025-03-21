@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int idade;
+    printf("Digite a sua idade\n");
+    scanf("%d", &idade);  // Alterado %f para %d, pois idade é um inteiro
+    
+    if (idade <= 12) {
+        printf("Voce tem %d e eh uma criança\n", idade);  // Alterado %f para %d
+    } 
+    if (idade <= 19) {  // Removido ponto e vírgula extra
+        printf("Voce tem %d e eh um adolescente\n", idade);  // Alterado %f para %d
+    } 
+    if (idade <= 60) {  // Removido ponto e vírgula extra
+        printf("Voce tem %d e eh um adulto\n", idade);  // Alterado %f para %d
+    } else {
+        printf("Voce tem %d e eh um idoso\n", idade);  // Alterado %f para %d e corrigida a sintaxe
+    }
+    return 0;
+}
