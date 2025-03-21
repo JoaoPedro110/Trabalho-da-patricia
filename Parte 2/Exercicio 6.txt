@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    char letra;
+
+    printf("Digite uma vogal (a, e, i, o, u): ");
+    scanf("%c", &letra);
+
+    switch (letra) {
+        case 'a':
+            printf("Palavra formada: Amor\n");
+            break;
+        case 'e':
+            printf("Palavra formada: Elefante\n");
+            break;
+        case 'i':
+            printf("Palavra formada: Iglu\n");
+            break;
+        case 'o':
+            printf("Palavra formada: Olá\n");
+            break;
+        case 'u':
+            printf("Palavra formada: Urso\n");
+            break;
+        default:
+            printf("Não é uma vogal.\n");
+    }
+
+    return 0;
+}
