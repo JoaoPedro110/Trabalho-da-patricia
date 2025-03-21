@@ -1,0 +1,106 @@
+#include <stdio.h>
+
+int main() {
+    int opcao1, opcao2;
+    float num1, num2, resultado;
+
+    // Menu principal
+    printf("Escolha o tipo de operação:\n");
+    printf("1. Operações Básicas\n");
+    printf("2. Operações Avançadas\n");
+    printf("Digite sua opção: ");
+    scanf("%d", &opcao1);
+
+    // Switch para escolher o tipo de operação
+    switch(opcao1) {
+        case 1: // Operações Básicas
+            printf("\nEscolha a operação básica:\n");
+            printf("1. Adição\n");
+            printf("2. Subtração\n");
+            printf("3. Multiplicação\n");
+            printf("4. Divisão\n");
+            printf("5. Módulo (Resto da divisão)\n");
+            printf("Digite sua opção: ");
+            scanf("%d", &opcao2);
+
+            // Leitura dos números
+            printf("Digite o primeiro número: ");
+            scanf("%f", &num1);
+            printf("Digite o segundo número: ");
+            scanf("%f", &num2);
+
+            // Switch aninhado para as operações básicas
+            switch(opcao2) {
+                case 1: 
+                    resultado = num1 + num2;
+                    printf("Resultado da adição: %.2f\n", resultado);
+                    break;
+                case 2:
+                    resultado = num1 - num2;
+                    printf("Resultado da subtração: %.2f\n", resultado);
+                    break;
+                case 3:
+                    resultado = num1 * num2;
+                    printf("Resultado da multiplicação: %.2f\n", resultado);
+                    break;
+                case 4:
+                    if (num2 != 0) {
+                        resultado = num1 / num2;
+                        printf("Resultado da divisão: %.2f\n", resultado);
+                    } else {
+                        printf("Erro: divisão por zero não permitida!\n");
+                    }
+                    break;
+                case 5:
+                    if ((int)num2 != 0) {
+                        int resto = (int)num1 % (int)num2;
+                        printf("Resultado do módulo: %d\n", resto);
+                    } else {
+                        printf("Erro: divisão por zero não permitida para módulo!\n");
+                    }
+                    break;
+                default:
+                    printf("Opção inválida para operações básicas!\n");
+                    break;
+            }
+            break;
+
+        case 2: // Operações Avançadas
+            printf("\nEscolha a operação avançada:\n");
+            printf("1. Soma dos quadrados dos números\n");
+            printf("2. Incremento\n");
+            printf("3. Decremento\n");
+            printf("Digite sua opção: ");
+            scanf("%d", &opcao2);
+
+            // Leitura dos números
+            printf("Digite o primeiro número: ");
+            scanf("%f", &num1);
+            
+            // Switch aninhado para as operações avançadas
+            switch(opcao2) {
+                case 1:
+                    resultado = (num1 * num1) + (num2 * num2);
+                    printf("Resultado da soma dos quadrados: %.2f\n", resultado);
+                    break;
+                case 2:
+                    num1++;
+                    printf("Resultado do incremento: %.2f\n", num1);
+                    break;
+                case 3:
+                    num1--;
+                    printf("Resultado do decremento: %.2f\n", num1);
+                    break;
+                default:
+                    printf("Opção inválida para operações avançadas!\n");
+                    break;
+            }
+            break;
+
+        default:
+            printf("Opção inválida para o tipo de operação!\n");
+            break;
+    }
+
+    return 0;
+}
